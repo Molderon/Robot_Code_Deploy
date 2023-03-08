@@ -1,9 +1,1 @@
-#include<iostream>
-using namespace std;
-
-int main(void){
-
-cout<<"bla...bla...bla\n\n";
-
-return 0;
-}
+#include<iostream>using namespace std;int main(void){cout<<"bla...bla...bla\n\n";return 0;}         

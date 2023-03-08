@@ -1,16 +1,18 @@
-defaut: RCD_main.o RCD_net.o
-	g++ RCD_main.o RCD_net.o RCD_header.h -lczmq -o Client
+defaut: RCD_server.o RCD_network.o
+	g++ RCD_server.o RCD_network.o RCD_server.h -std=c++20 -lpthread -lczmq -o Server
 	make clean
 
 clean:
-	rm -r *.o
+	rm -r *.o 
 
 
-RCD_main.o: RCD_main.cpp
-	g++ -c -o RCD_main.o RCD_main.cpp -O2 -Wall -lpthread -lczmq
+RCD_server.o: RCD_server.cpp
+	g++ -c -o RCD_server.o RCD_server.cpp -O2  -lpthread -lczmq
 
-RCD_net.o: RCD_net.cpp
-	g++ -c -o RCD_net.o RCD_net.cpp -O2 -Wall -lpthread -lczmq
+RCD_network.o: RCD_network.cpp
+	g++ -c -o RCD_network.o RCD_network.cpp -O2  -lpthread -lczmq
 
 run:
-	./Client
+	./Server
+	make clean
+	
