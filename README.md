@@ -5,8 +5,8 @@
         | |\/| | / _ \| | / _` |/ _ \ '__/ _ \| '_  \   
         | |  | || (_)|| || (_| |  __/ | | (_) | | | |			       
         \_|  |_/\___/ |_|\\__,_|\___|_| \___./|_| |_|			        
-	     --------------------------------------------	            
-           [Robot Code Deploy] -- version::0.1				            
+	     -------------------------------------------	            
+            [Robot Code Deploy] -- version::0.1				            
  								   	                                              
                                                        \_/		    
        (thy code)                                     (* *)		    
@@ -20,7 +20,7 @@
       `-=========-`()		              (thy machine)  
  									                                                
         								                                          
-   -> Greetings Humanoids, apparently I'm sick of disassembling   
+   -> Greetings Humanoids, apparently I'm sick of reassembling   
 	Robots and spining-up VNC/SSH shells just to run or test	      
 	some code on external machines. So I began to hatch the		      
 	following application to help me deliver code to my robots.	    
