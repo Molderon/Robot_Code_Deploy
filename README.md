@@ -20,7 +20,7 @@
       `-=========-`()		              (thy machine)  
  									                                                
         								                                          
-   -> Greetings Humanoids, apparently I'm sick of reassembling   
+   -> Greetings Humanoids, thus I am sick of reassembling   
 	Robots and spining-up VNC/SSH shells just to run or test	      
 	some code on external machines. So I began to hatch the		      
 	following application to help me deliver code to my robots.	    
