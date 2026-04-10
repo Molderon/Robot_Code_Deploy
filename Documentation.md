@@ -4,9 +4,9 @@
 ---
 
 ## ⚡ Tool Objectived
-**Robot Code Deploy** is a terminal-centric system designed for the gritty reality of networked hardware. It’s built for the developer who needs to push code to a swarm of robots, servers or embedded "toasters" without the bloat of heavy CI/CD pipelines or container registries.
+**Robot Code Deploy** is a terminal-centric system designed for the gritty reality of networked hardware. It’s built for the developer who needs to push code to a swarm of robots, servers or embedded "toasters"; without the bloat of heavy CI/CD pipelines or container registries.
 
-Running as a **Linux Daemon**, RCD ensures your machines are always running the right version and easy to maintain, even if the network is flaky or the hardware is experimental.
+Running as a **Linux Daemon**, RCD ensures your machines are always running the right version and easy to maintain, even if the network is flaky.
 ---
 
 ## 🏗️ Project Architecture
@@ -22,9 +22,10 @@ robot-code-deploy/
 │   ├── network/            # ZeroMQ (cppzmq) wrappers
 │   └── utils/              # std::filesystem & magic-wormhole bridges
 ├── src/
-│   ├── daemon/             # Linux service loop (The "Heartbeat")
+│   ├── daemon/             # Linux service loop.
 │   ├── cli/                # 'rcd-ctl' terminal tool
 │   └── main.cpp            # Entry point (std::execution scheduler)
+|
 ├── tests/                  # C++ Contracts validation suite
 └── CMakeLists.txt          # Target: CXX_STANDARD 26
 ```
@@ -43,13 +44,13 @@ The high‑speed nervous system of RCD. It handles reconnections, message queues
 ### magic-wormhole
 Enables secure file transfer using a simple human‑readable code (e.g., `4‑purple‑dinosaur`). Ideal for one‑off debug pushes or initial key exchange, even through NATs or firewalls.
 
-> **Note:** Both libraries are called via lightweight C++ wrappers – no heavy frameworks like Boost are allowed.
+> **Note:** Both libraries are called via lightweight C++ wrappers – no heavy frameworks like Boost are allowed this time.
 
 ---
 
 ## 🧪 C++26: Learning Objects
-We push the language to its limits while keeping the binary tiny. Here’s how:
 
+> Follow Functional Programming Paradigms!
 - **Compile‑time reflections (`^^`)** – Automatically generate ZeroMQ serialization for telemetry data. No more manual `to_json` boilerplate.
 - **`std::expected`** – Explicit error handling without exceptions. Every deployment step returns either a success value or a clear error.
 - **`std::filesystem`** – Atomic symlink swaps for instant rollbacks. If a new build fails its health check, the daemon flips back to the last known good version.
@@ -58,7 +59,11 @@ We push the language to its limits while keeping the binary tiny. Here’s how:
 - **Structured bindings** – Unpack complex message frames elegantly:  
   `auto [status, payload, crc] = parse_packet(buffer);`
 - **Coroutines** – The daemon suspends itself while waiting for network I/O, waking only when a message arrives. Near‑zero CPU usage when idle.
-
+---
+## Computer Science: Concepts
+- **`Topological sorting`**
+- **`System Priority Queues`**
+- **`A* Graph Terversal`**
 ---
 
 ## 🔧 Build & Run
